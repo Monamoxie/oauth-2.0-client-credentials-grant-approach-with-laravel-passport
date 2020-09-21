@@ -4,6 +4,8 @@
             <x-jet-authentication-card-logo />
         </x-slot>
 
+        <h2 class="text-center"> <b>LOGIN ON CLIENT</b> </h2>
+
         <x-jet-validation-errors class="mb-4" />
 
         @if (session('status'))
@@ -33,6 +35,10 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('register') }}">
+                    Not yet a member on client? 
+                </a>
+
                 @if (Route::has('password.request'))
                     <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
                         {{ __('Forgot your password?') }}
