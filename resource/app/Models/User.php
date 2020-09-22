@@ -9,12 +9,14 @@ use Illuminate\Notifications\Notifiable;
 use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Passport\HasApiTokens as PassportHasApiTokens;
-use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;
+// use Laravel\Sanctum\HasApiTokens as SanctumHasApiTokens;
+use App\Traits\Uuids;
 
 class User extends Authenticatable
 {
     use PassportHasApiTokens;
-    use SanctumHasApiTokens;
+    // use SanctumHasApiTokens;
+    use Uuids;
     use HasFactory;
     use HasProfilePhoto;
     use Notifiable;
@@ -29,6 +31,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'user_type'
     ];
 
     /**
