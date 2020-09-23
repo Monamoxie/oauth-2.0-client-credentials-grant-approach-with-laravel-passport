@@ -20,3 +20,7 @@ Route::get('/', function () {
 Route::middleware(['auth:sanctum', 'verified'])
 ->get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])
 ->name('dashboard');
+
+Route::middleware(['auth:sanctum', 'verified'])
+->get('/dashboard/token/request', [App\Http\Controllers\DashboardController::class, 'requestToken'])
+->name('request.token');

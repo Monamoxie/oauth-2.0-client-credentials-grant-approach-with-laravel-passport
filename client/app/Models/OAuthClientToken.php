@@ -8,4 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class OAuthClientToken extends Model
 {
     use HasFactory;
+
+    protected $guarded = [];
+
 }

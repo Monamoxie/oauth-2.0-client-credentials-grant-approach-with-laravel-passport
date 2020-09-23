@@ -14,7 +14,10 @@ class CreateOAuthClientTokensTable extends Migration
     public function up()
     {
         Schema::create('o_auth_client_tokens', function (Blueprint $table) {
-            $table->id();
+            $table->id(); 
+            $table->text('access_token');
+            $table->bigInteger('expires_in')->nullable();
+            $table->text('refresh_token')->nullable();
             $table->timestamps();
         });
     }
