@@ -32,5 +32,10 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::tokensExpireIn(now()->addDays(1));
 
+        Passport::tokensCan([
+            'view-posts' => 'View All Article posts'
+        ]);
+
+
     }
 }
