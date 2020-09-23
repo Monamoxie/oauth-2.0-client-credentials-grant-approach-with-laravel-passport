@@ -9,7 +9,7 @@ use Illuminate\Http\Request;
 class ApiPostsController extends Controller
 {
     public function listResouceUserPosts(Request $request)
-    {  
+    {   
         return Post::all();
     }
 }

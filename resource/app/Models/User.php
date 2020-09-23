@@ -64,7 +64,4 @@ class User extends Authenticatable
         'profile_photo_url',
     ];
 
-    public function get_oauth_client(){
-        return $this->token;
-      }
 }
